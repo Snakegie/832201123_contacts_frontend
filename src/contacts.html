@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>联系人管理系统</title>
+</head>
+<body>
+    <h1>联系人管理系统</h1>
+    <form id="add-contact-form">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" required>
+        <label for="phone">电话：</label>
+        <input type="text" id="phone" name="phone" required>
+        <button type="button" onclick="addContact()">添加联系人</button>
+    </form>
+
+    <h2>联系人列表</h2>
+    <ul id="contacts-list"></ul>
+
+    <script>
+        function addContact() {
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            alert(`添加联系人: 姓名 - ${name}, 电话 - ${phone}`);
+        }
+    </script>
+</body>
+</html>
